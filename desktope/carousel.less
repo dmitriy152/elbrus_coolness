@@ -1,0 +1,111 @@
+#quoteCarousel {
+    --carousel-button-svg-width: 36px;
+    --carousel-button-svg-height: 36px;
+  
+    --carousel-button-svg-stroke-width: 1;
+  }
+  
+  #quoteCarousel blockquote {
+    position: relative;
+  }
+  
+  #quoteCarousel blockquote:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 16px solid #fff;
+    border-right: 16px solid transparent;
+    position: absolute;
+    bottom: -16px;
+    left: 24px;
+  
+    filter: drop-shadow(0.2em 0.2em 0.1em rgba(0, 0, 0, 0.03))
+      drop-shadow(-0.2em 0.2em 0.1em rgba(0, 0, 0, 0.03));
+  }
+  
+  #quoteCarousel::before,
+  #quoteCarousel::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5rem;
+    z-index: 1;
+  }
+  
+  .carousel__button {
+    z-index: 10;
+  }
+  .carousel_conteiner {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  .carousel {
+    padding: 162px 15px 84px 15px;
+    width: 50%;
+  }
+  .carousel__slide {
+    background: #FFFFFF;
+    box-shadow: 0px 5px 20px rgba(25, 70, 186, 0.2);
+    width: 30%;
+    height: 265px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px;
+    picture {
+        margin-bottom: 30px;
+    }
+    span {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: #2A2A2A;
+    }
+  }
+  .button_block_pagination {
+    padding: 0px 15px 0px 15px;
+    height: 83px;
+    display: flex;
+    align-items: center;
+    .counter {
+      font-family: 'Geometria';
+      font-size: 15px;
+      line-height: 19px;
+      text-align: center;
+      color: #8C8C8C;
+      margin-right: 15px;
+    }
+    .pagination_line {
+      width: 484px;
+      height: 4px;
+      background: #DEDEDE;
+      .rage {
+        width: 25%;
+        height: 4px;
+        background: #1946BA;
+      }
+    }
+  }
+  .carousel__button.is-next {
+    border: 2px solid #1946BA;
+    color: #1946BA;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    width: 43px;
+    height: 43px;
+    top: 172px;
+    right: 15px;
+  }
+  .carousel__button.is-prev {
+    color: #1946BA;
+    border: 2px solid #1946BA;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    width: 43px;
+    height: 43px;
+    top: 172px;
+    left: auto;
+    right: 78px;
+  }
